@@ -1,0 +1,59 @@
+A) Apa itu arrays
+    : Array ialah data structure paling sederhana. Kita
+    biasa menggunakan array untuk menyimpan kumpulan
+    string, kumpulan integer, kumpulan objects, dan lain-lainnya.
+    Data yang disimpan di dalam array disimpan secara berurutan.
+    
+B) Array dalam Memory
+    : Misal kita mengalokasikan array 5 integer.
+    Integer ini disimpan pada memori seperti ini
+
+    integer            : 10-20-30-40-50
+    alamat pada memori : 100-104-108-112-116
+
+    Dengan cara seperti ini mencari data pada array 
+    dengan indexnya sangat cepat. Dengan rumus komplesitas O(1).
+
+C) Kelemahan pada array
+    : Ketika kita mengalokasikan array kita harus menspesifikasikan
+    ukuran dari array tersebut. Bagaimana bila kita tidak tahu
+    jumlah data yang ingin dimasukan? Bila ukuran array 
+    terlalu besar maka ia akan memakan banyak memori. Bila
+    ukuran array terlalu kecil maka ada data yang tidak dimasukan
+    dalam array.
+
+D) Kompleksitas dari Insert Array
+    : Terdapat array 1,2,3,4,5. Kita ingin menambahkan angka 6 pada
+    array tersebut. maka
+    1) dibuatlah array dengan ukuran 6 []-[]-[]-[]-[]-[]
+    2) Memasukan angka 1 pada array [1]-[]-[]-[]-[]-[]
+    2) Memasukan angka 2 pada array [1]-[2]-[]-[]-[]-[]
+    2) Memasukan angka 3 pada array [1]-[2]-[3]-[]-[]-[]
+    2) Memasukan angka 4 pada array [1]-[2]-[3]-[4]-[]-[]
+    2) Memasukan angka 5 pada array [1]-[2]-[3]-[4]-[5]-[]
+    2) Memasukan angka 6 pada array [1]-[2]-[3]-[4]-[5]-[6]
+    Rumus kompleksitas dari memasukan array ialah O(n).
+
+E) Kompleksitas dari Hapus Array
+    : Terdapat array 1,2,3,4,5. Kita ingin menghapus angka 1 
+    pada array tersebut maka
+    1) Menghapus angka 1 pada array []-[2]-[3]-[4]-[5]
+    2) Menggeser angka 2 pada kolom 1 [2]-[]-[3]-[4]-[5]
+    2) Menggeser angka 3 pada kolom 2 [2]-[3]-[]-[4]-[5]
+    3) Menggeser angka 4 pada kolom 3 [2]-[3]-[4]-[]-[5]
+    4) Menggeser angka 5 pada kolom 4 [2]-[3]-[4]-[5]-[]
+    rumus kompleksitas dari memasukan array ialah O(n).
+
+F) Array pada bahasa pemrograman Java
+    F.1) Mendeklarasi
+        : {tipe data} [] {nama array} = new {tipe data}[{jumlah array}]
+        cth :  int [] numbers = new int[3]
+    F.2) Menginisiasi
+        : {nama array}[{index ke berapa}] = {nilai inisiasi}
+        cth : numbers[0] = 1;
+    F.3) Mendeklarasikan sekaligus Menginisiasi
+        : {tipe data} [] {nama array} = {data...}
+        cth : int [] numbers = {1,2,3};
+    F.4) Mendapatkan panjang dari array
+        : {nama array}.length
+        cth : numbers.length;
