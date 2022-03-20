@@ -126,6 +126,39 @@ D) O(n ^ 2)
     : Pada contoh diatas syntax logic dijalankan sebanyak O(n) dikali dengan O(n) dikali dengan  O(n). maka rumusnya
     ialah O(n^3)
 
+E) O(log n)
+    : Disebut logratihmic complexity. Algoritma yang berjalan dengan complexity logratihmic menjadi lebih
+    efficient dan lebih scallable daripada algoritma yang berjalan linear atau quadratic.
+
+    E.1) Studi Kasus
+    : A) Diketahui :  Terdapat array yang sudah di sortir 1,2,3,4,5,6,7,8.
+      B) Ditanya : Temukan angka 8.
+
+    E.2) Solusi dengan Linear Search
+    : 1) Mengcek apakah 1 itu 8 bila bukan lanjutkan. bila ya berhenti
+      2) Mengcek apakah 2 itu 8 bila bukan lanjutkan. bila ya berhenti
+      3) Mengcek apakah 3 itu 8 bila bukan lanjutkan. bila ya berhenti
+      4) Mengcek apakah 4 itu 8 bila bukan lanjutkan. bila ya berhenti
+      5) Mengcek apakah 5 itu 8 bila bukan lanjutkan. bila ya berhenti
+      6) Mengcek apakah 6 itu 8 bila bukan lanjutkan. bila ya berhenti
+      7) Mengcek apakah 7 itu 8 bila bukan lanjutkan. bila ya berhenti
+      8) Mengcek apakah 8 itu 8 bila bukan lanjutkan. bila ya berhenti
+
+    E.3) Penjelasan
+    : Dengan algoritma diatas rumus complexitynya ialah O(n). Semakin banyak input Semakin
+    banyak pula kompleksitasnya.
+
+    E.4)Solusi Binary Search
+    1) Membagi dua array kiri : 1 2 3 4, dan kanan :  5 6 7 8. Mengcek apakah nilai tengah 5 itu 8.
+      bila lebih kecil maka hapus array kiri. bila itu lebih besar hapus array kanan. bila itu benar hentikan.
+    2) Membagi dua array kiri : 5 6, dan kanan :   7 8. Mengcek apakah nilai tengah 7 itu 8.
+      bila lebih kecil maka hapus array kiri. bila itu lebih besar hapus array kanan. bila itu benar hentikan.
+    3) Membagi dua array kiri : 7, dan kanan :  8. Mengcek apakah nilai tengah 8 itu 8.
+      bila lebih kecil maka hapus array kiri. bila itu lebih besar hapus array kanan. bila itu benar hentikan.
+
+    E.5) Penjelasan
+    : Dengan algoritma binary search compleksitasnya dapat dikurangi menjadi O(2 log n). bila n = 8 maka
+    diselesaikan maksimum dengan O(2 log 8) = 3.
 
         
 
