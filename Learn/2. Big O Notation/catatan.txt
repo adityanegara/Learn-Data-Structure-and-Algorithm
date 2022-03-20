@@ -84,6 +84,48 @@ C) O(n)
     : Pada algoritma diatas terdapat dua input yaitu numbers dan string. Masing-masing input diulang sebanyak
     panjangnya input. Maka rumusnya ialah O(n+m), dengan n = input numbers dan m ialah input strings.
 
+D) O(n ^ 2)
+    : Disebut pula quadratic formula. Runtime complexity akan sangat besar bila inputnya besar pula.
+
+    D.1) Contoh 1
+    :  for(let i =0; i< strings.length; i++){
+            for(let j=0; j< strings.length; j++){
+                      console.log(strings[j]);
+            }
+        }
+    
+    D.2) Penjelasan
+    : Pada contoh diatas syntax logic dijalankan sebanyak banyaknya jumlah input dikali dengan banyaknya
+    jumlahnya input. O(n * n) atau O(n^2)
+
+    D.3) Contoh 2
+    :   for(let i =0; i< strings.length; i++){
+            console.log(strings[i]);
+        }
+    
+        for(let i =0; i< strings.length; i++){
+            for(let j=0; j< strings.length; j++){
+                      console.log(strings[j]);
+            }
+       }
+    
+    D.4) Penjelasan
+    : Pada contoh diatas syntax logic dijalankan sekali O(n). ditambah dengan O(n*n). maka rumus kompleksitasnya
+    ialah O(n + n^2). Dapat juga disederhanakan menjadi O(n^2) karena constant n tidak sesignifikan n^2.
+
+    D.5) Contoh 3
+    :  for(let i =0; i< strings.length; i++){
+            for(let j=0; j< strings.length; j++){
+                for(let k=0; k< strings.length; k++){
+                    console.log(strings[k]);
+                }
+            }
+       }
+    
+    D.6) Penjelasan
+    : Pada contoh diatas syntax logic dijalankan sebanyak O(n) dikali dengan O(n) dikali dengan  O(n). maka rumusnya
+    ialah O(n^3)
+
 
         
 
