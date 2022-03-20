@@ -160,6 +160,9 @@ E) O(log n)
     : Dengan algoritma binary search compleksitasnya dapat dikurangi menjadi O(2 log n). bila n = 8 maka
     diselesaikan maksimum dengan O(2 log 8) = 3.
 
+F) O(2 ^n)
+    : Exponential Growth
+
         
 
 
