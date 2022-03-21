@@ -1,0 +1,44 @@
+A) Pengertian Linked List
+    : Kita menggunakan linked list untuk menyimpan data dengan berurutan. berbeda dari array
+    linked list dapat tumbuh dan mengecil dengan sendirinya.
+
+B) Struktur Linked List
+    : Terdiri dari sejumlah node. Node berisikan value dan alamat untuk node selanjutnya. Node pertama disebut
+    dengan Head dan Node terakhir disebut tail
+        
+    [{value}, {alamat node selanjutnya}] --> [{value}, {alamat node selanjutnya}] --> [{value}, {alamat node selanjutnya}]
+
+C) Rumus Kompleksitas Linked List
+     C.1) Mencari nilai
+        C.1.1) Mencari Nilai dengan value
+            : Bila mencari nilai dengan value kita harus menelusuri linked list dari awal sampai akhir.
+            maka rumus komplesitasnya ialah O(n).
+
+        C.1.2) Mencari nilai dengan index        
+            : Tidak seperti array yang memiliki index. Linked list harus menyelusuri dari head sampai tail.
+            maka rumus kompleksitasnya ialah O(n).
+
+    C.2) Memasukan nilai
+        C.2.1) Memasukan nilai pada akhir
+            : Membuat node baru. dan membuat node tail sekarang. Mereferensikan node baru. Maka rumus
+            kompleksitasnya ialah O(1)
+        
+        C.2.2) Memasukan nilai baru pada awal
+            : Membuat node baru. dan node baru tersebut mereferensikan head sekarang. dan merubah Head menjadi
+            node baru. Maka rumus kompleksitasnya ialah O(1)
+        
+        C.2.3) Memasukan nilai baru pada tengah
+            : Mencari node yang ingin diubah referensenya. Merubah referensi node tersebut ke node baru. 
+            Rumus kompleksitasnya ialah O(n + 1) atau O(n).
+
+    C.3) Menghapus Nilai
+        C.3.1) Menghapus nilai pada awal
+            : Merubah referensi Head kepada alamatnya. Dan menghapus node Head sebelumnya. Maka rumusnya ialah O(1).
+
+        C.3.2) Menghapus nilai pada akhir
+            : Mencari node yang mereferensikan pada tail. mengubahnya menjadi tail baru. dan menghapus tail.
+            Rumus kompleksitasnya ialah O(n + 1) atau O(n).
+
+        C.3.3) Menghapus nilai pada tengah
+            : Mencari node yang ingin dihapus dan node sebelumnya. memasangkan node sebelumnya ke alamat dari node yang ingin dihapus.
+            Dan menghapus node yang ingin dihapus. Rumus kompleksitasnya ialah O(n + 1) atau O(n).
