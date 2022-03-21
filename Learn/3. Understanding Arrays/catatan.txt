@@ -57,3 +57,32 @@ F) Array pada bahasa pemrograman Java
     F.4) Mendapatkan panjang dari array
         : {nama array}.length
         cth : numbers.length;
+
+G) ArrayList
+    : Merupakan class untuk membuat dynamic array
+
+    G.1) Deklarasi ArrayList
+    : ArrayList<{type data}> {nama arraylist} = new ArrayList<>();
+    cth : ArrayList<Integer> list = new ArrayList<>();
+
+    G.2) Method ArrayList
+        G.2.1) add({data})
+        :Menambahkan data pada arraylist
+
+        G.2.2) remove({index})
+        : Menghapus index pada arraylist
+
+        G.2.3) indexOf({object})
+        : Mendapatkan index pertama dari object
+
+        G.2.4) lastIndexOf({object})
+        :  Mendapatkan index terakhir dari object
+
+        G.2.5) contains({object})
+        : Mengecek apakah terdapat object dalam array atau tidak
+
+        G.2.6)size()
+        : Mendapatkan ukuran arraylist
+
+        G.2.7) toArray()
+        : Mengkonversi arraylist menuju array
