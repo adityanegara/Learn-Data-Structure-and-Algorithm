@@ -42,3 +42,36 @@ C) Rumus Kompleksitas Linked List
         C.3.3) Menghapus nilai pada tengah
             : Mencari node yang ingin dihapus dan node sebelumnya. memasangkan node sebelumnya ke alamat dari node yang ingin dihapus.
             Dan menghapus node yang ingin dihapus. Rumus kompleksitasnya ialah O(n + 1) atau O(n).
+
+D) Linked List pada Java
+    D.1) Syntax dengan Type Data
+        : LinkedList <{type data}> {nama linked list} = new LinkedList <{type data}>();
+        cth : LinkedList <Integer> list = new LinkedList <Integer>();
+
+    D.2) Syntax tanpa Type Data
+        : LinkedList {nama linked list} = new LinkedList();
+        cth : LinkedList list = new LinkedList();
+
+    D.3) Menambahkan data pada akhir
+        : addLast(data)
+    
+    D.4) Menambahkan data pada awal
+        : addFirst(data)
+    
+    D.5) Menghapus data pada pertama
+        : removeFirst()
+    
+    D.6) Menghapus data pada akhir
+        : removeLast()
+
+    D.7) Melihat apakah ada data
+        : contains({data})
+
+    D.8) Mendapatkan index dari sebuah data
+        : indexOf({data})
+
+    D.9) Mendapatkan ukuran dari linked list
+        : size()
+
+    D.10) Mengkonversi linked list menjadi array
+        : .toArray();
