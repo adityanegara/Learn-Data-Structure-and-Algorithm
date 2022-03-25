@@ -142,7 +142,7 @@ E) Array Vs Linked List
             : O(n)
         
 
-F) Type dari Linekd List
+F) Type dari Linked List
     F.1) Doubly Linked List
     : Bila linked list memiliki property nextNode untuk merujuk kepada node selanjutnya. Doubly
     Linked List memiliki property previousNode untuk merujuk kepada node sebelumnya.
@@ -155,3 +155,10 @@ F) Type dari Linekd List
 
     F.2) Circular Linked List
     : Property dari nextNode pada tail circularLinkedList merujuk pada head.
+
+G) Membalikan Linked List
+    : Misal didapat Linked List [1 -> 2 -> 3]
+    G.1) Prosedur
+        1) Mengambil dua node pertama [1->2->3]
+        2) Mengubah referensi dari node kedua menjadi ke pertama [1<-2 3]
+        

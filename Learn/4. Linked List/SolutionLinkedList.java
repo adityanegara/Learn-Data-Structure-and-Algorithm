@@ -115,6 +115,22 @@ public class SolutionLinkedList {
             addFirstArrray(listArray);
         }
 
+        public void reverseSolution() {
+            if (isEmpty())
+                return;
+            var previousNode = first;
+            var currentNode = first.next;
+            while (currentNode != null) {
+                var nextNode = currentNode.next;
+                currentNode.next = previousNode;
+                previousNode = currentNode;
+                currentNode = nextNode;
+            }
+            last = first;
+            last.next = null;
+            first = previousNode;
+        }
+
         private void removeAll(int linkedListSize) {
             for (int i = 0; i < linkedListSize; i++) {
                 removeLast();
@@ -146,7 +162,8 @@ public class SolutionLinkedList {
         list.addLast(2);
         list.addLast(3);
         list.addLast(4);
-        list.reverse();
+        list.addLast(5);
+        list.reverseSolution();
         System.out.println(Arrays.toString(list.toArray()));
 
     }
