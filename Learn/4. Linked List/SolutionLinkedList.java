@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class SolutionLinkedList {
@@ -84,8 +85,46 @@ public class SolutionLinkedList {
             return -1;
         }
 
+        public int size() {
+            int count = 0;
+            var current = first;
+            while (current != null) {
+                current = current.next;
+                count++;
+            }
+            return count;
+        }
+
+        public int[] toArray() {
+            int[] listArray = new int[size()];
+            var current = first;
+            for (int i = 0; i < listArray.length; i++) {
+                listArray[i] = current.value;
+                current = current.next;
+            }
+            return listArray;
+        }
+
         public boolean contains(int item) {
             return indexOf(item) != -1;
+        }
+
+        public void reverse() {
+            int[] listArray = toArray();
+            removeAll(listArray.length);
+            addFirstArrray(listArray);
+        }
+
+        private void removeAll(int linkedListSize) {
+            for (int i = 0; i < linkedListSize; i++) {
+                removeLast();
+            }
+        }
+
+        private void addFirstArrray(int[] array) {
+            for (int i = 0; i < array.length; i++) {
+                addFirst(array[i]);
+            }
         }
 
         public void print() {
@@ -103,13 +142,12 @@ public class SolutionLinkedList {
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        // list.addFirst(4);
-        // list.addFirst(3);
-        list.addFirst(2);
-        list.addFirst(1);
-        list.removeLast();
-        list.print();
-        // System.out.println(list.indexOf(10));
-        // System.out.println(list.contains(10));
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+        list.addLast(4);
+        list.reverse();
+        System.out.println(Arrays.toString(list.toArray()));
+
     }
 }

@@ -75,3 +75,83 @@ D) Linked List pada Java
 
     D.10) Mengkonversi linked list menjadi array
         : .toArray();
+
+E) Array Vs Linked List
+    E.1) Space
+    : 1) Static array memiliki ukuran yang fixed
+      2) Dynamic array bila bertambah ukurannya dapat bertambah sebanya 50% sampai 100%
+      ini menyebabkan banyak memori yang tersisa
+      3) Linked list tidak menyisakan memori
+      4) Gunakan array bila kamu tahu berapa banyak item yang akan dimasukan
+
+    E.2) Rumus Kompleksitas berdasarkan metode
+        E.2.1) Pencarian dengan index
+            E.2.1.1) Arrays
+            : O(1)
+
+            E.2.1.2) Linked List
+            : O(n) 
+        
+        E.2.2) Pencarian dengan value
+            E.2.2.1) Arrays
+            : O(n)
+            
+            E.2.2.2) Linked List
+            : O(n)
+        
+        E.2.3) Menambahkan data di depan
+            E.2.3.1) Arrays
+            : O(n)
+
+            E.2.4.1) Linked List
+            : O(1)
+
+        E.2.4) Menambahkan data di belakang
+            E.2.4.1) Arrays
+            : O(n)
+
+            E.2.4.1) Linked List
+            : O(1)
+        
+        E.2.5) Menambahkan array di tengah
+            E.2.5.1) Arrays
+            : O(n)
+
+            E.2.5.2) Linked List
+            : O(n)
+
+        E.2.6) Menghapus data di depan
+            E.2.3.1) Arrays
+            : O(n)
+
+            E.2.4.1) Linked List
+            : O(1)
+
+        E.2.7) Menghapus data di belakang
+            E.2.4.1) Arrays
+            : O(n)
+
+            E.2.4.1) Linked List
+            : O(n)
+        
+        E.2.5) Menambahkan array di tengah
+            E.2.5.1) Arrays
+            : O(n)
+
+            E.2.5.2) Linked List
+            : O(n)
+        
+
+F) Type dari Linekd List
+    F.1) Doubly Linked List
+    : Bila linked list memiliki property nextNode untuk merujuk kepada node selanjutnya. Doubly
+    Linked List memiliki property previousNode untuk merujuk kepada node sebelumnya.
+
+        F.1.1) Rumus Kompleksitas Menghapus node di akhir
+        : Karena doubly linked list memiliki property previousNode. Maka untuk menghapus node terakhir
+        1) previousNode dari node terakhir diubah menjadi tail
+        2) nextNode dari tail diassign ke null
+        Dengan rumus kompleksitas O(1)
+
+    F.2) Circular Linked List
+    : Property dari nextNode pada tail circularLinkedList merujuk pada head.
