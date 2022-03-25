@@ -154,17 +154,32 @@ public class SolutionLinkedList {
         private boolean isEmpty() {
             return first == null;
         }
+
+        private int getTheNthNodeFromTheEnd(int n) {
+            if ((n > size()) || (n < 1)) {
+                throw new NoSuchElementException();
+            }
+            var firstNode = first;
+            var secondNode = first;
+            for (int i = 0; i < n - 1; i++) {
+                secondNode = secondNode.next;
+            }
+            while (secondNode.next != null) {
+                firstNode = firstNode.next;
+                secondNode = secondNode.next;
+            }
+            return firstNode.value;
+
+        }
     }
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        list.addLast(1);
-        list.addLast(2);
-        list.addLast(3);
-        list.addLast(4);
-        list.addLast(5);
-        list.reverseSolution();
-        System.out.println(Arrays.toString(list.toArray()));
-
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
+        list.addLast(40);
+        list.addLast(50);
+        System.out.println(list.getTheNthNodeFromTheEnd(5));
     }
 }
