@@ -71,6 +71,18 @@ class LinkedList {
       
     }
 
+    toArray = () =>{
+        const arrays = [];
+        let currentNode = this.head;
+        let index = 0;
+        while(currentNode !== null){
+            arrays[index] = currentNode.getValue();
+            currentNode = currentNode.getNextNode();
+            index+=1;
+        }
+        return arrays;
+    }
+
     isEmpty = () =>{
       if(this.head === null){
           return true;
@@ -103,6 +115,20 @@ class LinkedList {
         return -1;
     }
 
+    reverse = () =>{
+        let previousNode = this.head;
+        let currentNode = this.head.getNextNode();
+        while(currentNode !== null){
+            let nextNode = currentNode.next;
+            currentNode.next = previousNode;
+            previousNode = currentNode;
+            currentNode = nextNode;
+        }
+        this.tail = this.head;
+        this.tail.setNextNode(null);
+        this.head = previousNode;
+    }
+
     contains = (item) =>{
         return (this.indexOf(item) != -1) ? true : false;
     }
@@ -118,11 +144,11 @@ class LinkedList {
 
 
 let list = new LinkedList();
-// list.addLast(1);
-// list.addLast(2);
-// list.addLast(3);
-// list.addLast(4);
-list.removeLast();
-list.print();
+list.addLast(1);
+list.addLast(2);
+list.addLast(3);
+list.addLast(4);
+list.reverse(); 
+console.log(list.contains(100));
 
 
