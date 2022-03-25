@@ -157,7 +157,7 @@ public class SolutionLinkedList {
 
         private int getTheNthNodeFromTheEnd(int n) {
             if ((n > size()) || (n < 1)) {
-                throw new NoSuchElementException();
+                throw new IllegalArgumentException();
             }
             var firstNode = first;
             var secondNode = first;

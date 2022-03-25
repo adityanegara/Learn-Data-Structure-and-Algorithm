@@ -129,6 +129,32 @@ class LinkedList {
         this.head = previousNode;
     }
 
+    getTheNthNodeFromtTheEnd = (n) =>{
+        if((n > this.size()) || (n<1)){
+            throw  "Illegal Arguments";
+        }
+        let firstNode = this.head;
+        let secondNode = this.head;
+        for(let i =0; i< n-1; i++){
+            secondNode = secondNode.getNextNode();
+        }
+        while(secondNode.next != null){
+            firstNode = firstNode.getNextNode();
+            secondNode = secondNode.getNextNode();
+        }
+        return firstNode.getValue();
+    }
+
+    size = () =>{
+        let count =0;
+        let current = this.head;
+        while(current != null){
+            current = current.getNextNode();
+            count++;
+        }
+        return count;
+    }
+
     contains = (item) =>{
         return (this.indexOf(item) != -1) ? true : false;
     }
@@ -144,11 +170,11 @@ class LinkedList {
 
 
 let list = new LinkedList();
-list.addLast(1);
-list.addLast(2);
-list.addLast(3);
-list.addLast(4);
-list.reverse(); 
-console.log(list.contains(100));
+list.addLast(10);
+list.addLast(20);
+list.addLast(30);
+list.addLast(40);
+list.addLast(50)
+console.log(list.getTheNthNodeFromtTheEnd(5));
 
 
