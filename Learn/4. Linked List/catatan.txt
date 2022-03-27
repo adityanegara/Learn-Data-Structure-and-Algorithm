@@ -162,3 +162,63 @@ G) Membalikan Linked List
         1) Mengambil dua node pertama [1->2->3]
         2) Mengubah referensi dari node kedua menjadi ke pertama [1<-2 3]
         
+
+
+H) Mengembalikan Linked List yang ada di tengah
+    H.1) Pertanyaan
+        : Misal terdapat linked List 
+        cth : [1->2->3->4->5], [1->2->3->4->5->6], [1->2->3->4->5->6->7->8]
+    H.2) Ditanya
+        : Kembalikan nilai tengahnya [3], [3,4], [4,5]
+    H.3) Solusi saya
+        : 1) Mengcek ukuran dari array
+          : 5, 6, 7, 8
+          2) Jika ganjil bagi dua arraynya dan bulatkan ke terbesar
+          : 2.5 -> 3, 3.5->4
+          3) Jika genap bagi dua arraynya dan tambahkan 1 bilangan
+          : [3,4], [4, 5]   
+          4) Mencari node dengan urutan tersebut
+          : [3], [3,4], [4], [4,5]
+
+    H.4) Solusi Codewithmosh
+        H.4.1) Prosedur
+            : 1) Membuat dua pointer current dan iterate.
+              2) Kedua pointer tersebut merujuk pada head.
+              3) Jalankan node iterate dua kali.
+              4) Jalankan node current satu kali.
+              5) Berhenti bila node iterate sama dengan tail atau null.
+              6) Bila berhenti pada tail.
+              7) nilai current ialah nilai tengah
+              8) Bila berhneti pada null
+              9) nilai current ialah nilai tengah dan satu node setelahnya.
+
+        H.4.2) Contoh
+        1)  [1->2->3]
+                *
+
+        2) [1->2->3->4->5]
+                  *  
+                        *
+        
+        3) [1->2->3->4->5->6->7]
+                     *
+                              *
+
+        4) [1->2->3->4->5->6->7->8->9]
+                        *
+                                    *
+
+        5) [1->2]
+            *
+                  *
+                 
+        6) [1->2->3->4]
+               *
+                        *           
+        
+        7) [1->2->3->4->5->6]
+                  *
+                              *
+
+
+            

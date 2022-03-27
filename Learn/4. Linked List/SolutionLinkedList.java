@@ -171,6 +171,55 @@ public class SolutionLinkedList {
             return firstNode.value;
 
         }
+
+        public void printMiddleSolution() {
+            if (isEmpty()) {
+                return;
+            }
+            var pointerNode = first;
+            var lastNode = first;
+            while (lastNode.next != null) {
+                if (lastNode.next.next == null) {
+                    lastNode = null;
+                    break;
+                }
+                lastNode = lastNode.next.next;
+                pointerNode = pointerNode.next;
+            }
+            System.out.println(pointerNode.value);
+            if (lastNode == null) {
+                System.out.println(pointerNode.next.value);
+            }
+        }
+
+        public void printMiddle() {
+            if (isEmpty()) {
+                return;
+            }
+            int firstIndex = size() / 2;
+            int secondIndex = -1;
+            if (size() % 2 == 0) {
+                secondIndex = firstIndex + 1;
+            } else {
+                firstIndex += 1;
+            }
+            var current = first;
+            for (int i = 0; i < firstIndex; i++) {
+                if (i == firstIndex - 1) {
+                    System.out.println(current.value);
+                }
+                current = current.next;
+            }
+            if (secondIndex != -1) {
+                current = first;
+                for (int i = 0; i < secondIndex; i++) {
+                    if (i == secondIndex - 1) {
+                        System.out.println(current.value);
+                    }
+                    current = current.next;
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -180,6 +229,10 @@ public class SolutionLinkedList {
         list.addLast(30);
         list.addLast(40);
         list.addLast(50);
-        System.out.println(list.getTheNthNodeFromTheEnd(5));
+        list.addLast(60);
+        list.addLast(70);
+        list.addLast(80);
+        list.printMiddleSolution();
+        // System.out.println(list.getTheNthNodeFromTheEnd(5));
     }
 }
