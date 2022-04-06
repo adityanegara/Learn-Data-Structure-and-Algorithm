@@ -178,3 +178,10 @@ list.addLast(50)
 console.log(list.getTheNthNodeFromtTheEnd(5));
 
 
+ SinglyLinkedListNode =  {
+    data: 16,
+    next: SinglyLinkedListNode {
+      data: 13,
+      next: SinglyLinkedListNode { data: 7, next: null }
+    }
+  }

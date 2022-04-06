@@ -1,0 +1,14 @@
+{
+  "name": "hackerrank-linked-list",
+  "version": "1.0.0",
+  "description": "A Hackerrank linked list training",
+  "main": "singlyLinkedList.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Aditya Negara",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^4.0.2"
+  }
+}

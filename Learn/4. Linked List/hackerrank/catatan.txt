@@ -1,0 +1,34 @@
+A) Memutar Singly Linked List
+    : 1) Membuat dua pointer
+      2) Pointer pertama merujuk pada head.
+      3) Pointer kedua merujuk pada null.
+      4) Melakukan perulangan sampai nilai head itu null.
+      5) Menyimpan next pada pointer pertama.
+      5) Menukar next pada pointer pertama menjadi pointer kedua.
+      6) Menukar ponter kedua menjadi ponter pertama
+      7) pointer pertama merujuk pada nilai next yang disimpan
+
+B) Mendapatkan nilai dari tail
+  [1->2->3->4->5]  fromTail = 1, kembalian = 4
+            *  *
+  
+  [1->2->3->4->5]  fromTail = 2, kembalian = 3
+          *    *
+
+  [1->2->3->4->5] fromTail = 3, kembalian = 2
+      *        *
+
+C) Menghapus duplikasi array sorted
+  [1->1->2->2->3]
+   *
+      *
+
+D) Mendeteksi Adanya sikluxs
+  : Bila didapatkan linked list yang mengulang maka mengembalikan 1. bila tidak kembalikan 0
+    contoh : [1 -> 2 -> 3 -> 1->]
+
+    [1->1->1] 
+              *  
+    *
+    
+  

@@ -1,0 +1,53 @@
+A) Kegunaan Stacks
+    1) Mengimplementasikan fitur undo
+    2) Membuat compilers
+    contoh : syntax check
+    3) Mengevaluasi expressinion
+    contoh : 1+2*3
+    4) Membuat navigasi (maju/mundur)
+    contoh: Navigasi halaman sebelumnya dan selanjutnya
+
+B) Structure Stacks
+    : Bayangkan stack seperti tumpukan buku. Kita hanya dapat membaca atau menghapus buku paling atas
+
+C) Last in First Out(LIFO)
+    : Barang yang terakhir masuk pada stack ialah barang yang akan pertama keluar
+
+D) Runtime Complexities Pada Stacks
+    D.1) push(item)
+    : Menaruh item pada bagian atas dari stack. Runtime Complexities O(1)
+
+    D.2) pop()
+    : Menghapus item teratas dari stack. Runtime Complexities O(1)
+
+    D.3) peek()
+    : Melihat item teratas dari stack. Runtime Complexities O(1)
+
+    D.4) isEmpty()
+    : Mengcek apakah stack kosong atau tidak. Runtime Complexities O(1)
+
+E) Syntax Stack pada Java
+    E.1) Mengimport class Stack
+    : import java.util.Stack;
+
+    E.2) Mendeklarasikan Stack
+    : Stack<[type data]> [nama stack] = new Stack<>();
+    contoh :  Stack<Integer> stack = new Stack<>();
+
+    E.3) Memasukan data pada akhir 
+    : [nama stack].push([data]);
+    contoh : stack.push(10);
+
+    E.4) Membalikan data terakhir dan menghapusnya
+    : [nama stack].pop();
+    contoh stack.pop();
+
+    E.5) Membalikan data terakhir dan tidak menghapusnya
+    : [nama stack].peek();
+    contoh : stack.peek();
+
+    E.6) Mengcek apakah stack kosong
+    : [nama stack].isEmpty();
+    contoh : stack.isEmpty();
+
+
