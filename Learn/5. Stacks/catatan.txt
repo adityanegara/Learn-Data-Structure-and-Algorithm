@@ -50,4 +50,15 @@ E) Syntax Stack pada Java
     : [nama stack].isEmpty();
     contoh : stack.isEmpty();
 
+F) Algoritma Balance expressinion
+    : 1) Mengiterasi semua string
+      2) Jika itu merupakan open bracket
+      3) Masukan kepada stack
+      4) Jika mendapatkan karakter 
+      5) Hiraukan
+      6) Jika mendapatkan close bracket
+      7) Pop stack teratas dan bandingkan dengan karakter tersebut
+      8) Jika tidak match maka kembalikan false
+      9) Jika perulangan selesai kembalikan true
+
 
