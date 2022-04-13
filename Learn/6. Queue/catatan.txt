@@ -1,0 +1,67 @@
+A) Apa itu queue
+    : Queue ialah data struktur sama seperti Stack yang menerapkan
+    prinsip First in First Out (FIFO)
+
+B) First in First Out (FIFO)
+    : FIFO berarti data yang pertama masuk ialah data yang pertama
+    keluar
+
+C) Pengaplikasian Queue 
+    1) Printers
+    2) Operating Systems
+    3) Web Servers
+    4) Life Support Systems
+
+D) Operasi pada Queue
+    D.1) Enqueue
+    : Menambahkan data pada bagian belakang dari queue. Runtime
+    complexities O(1)
+
+    D.2) dequeue
+    : Mengembalikan dan menghapus data bagian depan dari queue. 
+    Runtime complexities O(1)
+
+    D.3) Peek
+    : Mengembalikan tanpa menghapus data bagian depan dari queue.
+    Runtime complexities O(1)
+
+    D.4) isEmpty
+    : Mengecek apakah queue itu kosong atau tidak.
+    Runtime complexities O(1)
+
+    D.5) isFull
+    : Mengecek apakah queue full atau tidak.
+    Runtime complexities O(1)
+
+E) Implementasi Queue pada Java
+    : Pada java queue ialah Interface. Interce berarti
+    ialah class yang beriiskan function kosong yang harus diisi.
+
+    E.1) Method pada interface Queue
+        E.1.1) add(e)
+            : Memasukan data pada queue. bila penuh maka
+            akan menampilkan error
+        
+        E.1.2) offer(e)
+            : Memasukan data pada queue. bial penuh maka tidak
+            akan menampilkan error
+        
+        E.1.3) poll()
+            : Mengambil nilai terdepan dari queue dan menghapusnya.
+             bila kosong kembalian null
+
+        E.1.4) remove()
+            : Mengambil nilai terdepan dari queue dan menghapusnya.
+            bila kosong akan mengembalikan Exception.
+
+        E.1.5) peek()
+            : Mengambil nilai terdepan dari queue. bila kosong
+            kembalian null.
+
+        E.1.6) element()
+            : Mengembalikan nilai terdepan dari queue. bila kosong
+            mengembalikan Exception
+
+    E.2) Inisialisasi
+    :  Queue<{tipe data}> {nama variable} = new {implementasi}<>();
+    contoh :  Queue<Integer> queue = new ArrayDeque<>();
