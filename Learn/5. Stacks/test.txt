@@ -1,0 +1,28 @@
+()
+: ( ketemu dengan )
+
+<> 
+: < ketemu dengan >
+
+[]
+
+: [ ketemu dengan ]
+
+)(
+: salah
+
+<()>
+: benar
+
+(((
+
+Stack : [<, (] ==> (
+1) Membuat perulangan sebanyak karakter
+2) Mengcek apakah dia itu open brancket atau bukan "<", "[", "(", "{"
+3) Jika karakter tersebut ialah open bracket maka masukan kedalam stack
+4) Jika itu merupakan closing bracket dia mengcek apakah nilai terakhir dari stack ialah
+pasangannya dari bracket tersebut
+5) Jika itu merupakan pasangannya lanjutkan perulangan
+6) Jika itu bukan merupakan pasangaannya kembalikan false
+7) Jika stack bracket memiliki sisa maka kembalikan false
+
