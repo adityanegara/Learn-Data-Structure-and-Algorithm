@@ -40,19 +40,4 @@ class Queue {
 }
 
 
-const reverseQueue = (queue) =>{
-   let stack = [];
-   let reversedQueue = new Queue();
-   while(queue.isEmpty() !== true){
-       stack.push(queue.dequeue());
-   }
-   while(stack.length !== 0){
-       reversedQueue.enqueue(stack.pop());
-   }
-   return reversedQueue;
-}
-
-module.exports = {
-    Queue,
-    reverseQueue
-}
+module.exports = Queue;
