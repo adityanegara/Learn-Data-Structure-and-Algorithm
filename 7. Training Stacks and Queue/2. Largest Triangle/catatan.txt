@@ -1,0 +1,26 @@
+A) Algoritma
+    1) Temukan batas kiri dari setiap bar
+    2) Temukan batas kanan dari setiap bar
+    3) Temukan luas dari setiap bar 
+
+B) Contoh Soal
+   B.1) Diketahui 
+   : Kumpulan Gedung [2,1,5,6,2,3]
+
+   B.2) Visualisasi
+   :
+               *
+             * *
+             * *
+             * *   *
+         *   * * * *
+         * * * * * *
+index :  0 1 2 3 4 5
+
+   B.3) Menemukan Batas Kiri dari setiap Gedung
+   : 1) Buatlah stack 
+     2) Pada index ke i cek apakah gedung kirinya lebih besar daripada gedung i.
+     3) bila ya maka pop stack 
+        3.1) cek apakah stack kosong
+        3.2) bila ya maka masukan index ke i pada stack
+
