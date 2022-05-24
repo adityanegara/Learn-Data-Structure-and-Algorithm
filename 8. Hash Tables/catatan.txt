@@ -1,0 +1,60 @@
+A) Apa itu Hash Tables
+    : Hash Tables ialah data structure dengan format key object. 
+    Memiliki kemampuan pencarian yang cepat.
+
+B) Kegunaan Hash Tables
+    1) Spell checkers
+    2) Dictionaries
+    3) Compilers
+    4) Code Editors
+
+C) Structure Hash Tables
+    : {
+        key: value
+    }
+
+D) Operasi Hash Table
+    1) Insert O(1)
+    2) Lookup O(1)
+    3) Delete O(1)
+
+E) Penggunaan hash map pada Java
+    : Harus dengan adanya interface Map. Class yang biasanya
+    digunakan ialah class HashMap
+
+    E.1) Deklarasi
+    : Map<{tipe data key}, {tipe data value}> {nama variabel} 
+     = new HashMap<>();
+     contoh : Map<Integer, String> map = new HashMap<>();
+
+    E.2) Memasukan nilai 
+    : {nama variabel map}.put({key}, {value})
+    contoh : map.put(3, "Adit")
+
+    E.3) Mengambil nilai
+    : {nama variabel map}.get({key})
+    contoh : map.get(3);
+
+    E.4) Mencari apakah nilai ada berdasarkan key
+    : {nama variabel map}.containsKey({key});
+    contoh : map.containsKey(3);
+
+    E.5) Mencari apakah key ada berdasarkan nilai
+    : {nama variabel map}.containsVal
+
+    E.6) Melakukan perulangan pada HashMap
+        E.6.1) keySet()
+        : dengan menggunakan keySet kita mendapatkan semua value
+        dari map
+        contoh : 
+          for (var item : map.keySet()) {
+            System.out.println(map.get(item));
+        }
+
+        E.6.1) entrySet()
+        : dengan menggunakan keySet kita mendapatkan key value
+        dari map
+        contoh : 
+          for (var item : map.keySet()) {
+            System.out.println(item.getValue);
+        }
