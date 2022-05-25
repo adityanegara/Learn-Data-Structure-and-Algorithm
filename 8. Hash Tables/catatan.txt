@@ -58,3 +58,28 @@ E) Penggunaan hash map pada Java
           for (var item : map.keySet()) {
             System.out.println(item.getValue);
         }
+
+F) Sets
+    : Set ialah data structure yang hanya memiliki key. tidak diizinkannya ada key yang terdupliaksi
+
+    F.1) Penggunaan Sets pada Java
+    : Menggunakan interface Set
+        F.1.1) Deklarasi
+        : Set<{type data}> set = new HashSet<>();
+        contoh : Set<Integer> set = new HashSet<>();
+
+        F.1.2) Menambahkan data ke set
+        : {nama variable set}.add({nilai})
+        contoh : set.add(3);
+
+        F.1.3) Menghapus data ke set
+        : {nama variable set}.remove({key})
+        contoh : set.remove(3);
+
+        F.1.4) Mengcek apakah ada key 
+        :  {nama variable set}.contains({key})
+        contoh : set.contains(3);
+
+        F.1.5) Mengcek ukuran dari set
+        :  {nama variable set}.size()
+        contoh : set.size();
