@@ -83,3 +83,63 @@ F) Sets
         F.1.5) Mengcek ukuran dari set
         :  {nama variable set}.size()
         contoh : set.size();
+
+G) Collision
+    : Ketika mengenerate hash value. dapat pula mengenerate hash value yang sama. Hal ini disebut Collision
+    
+H) Chaining
+    : Solusi dari collision dimana menggunakan Linked List untuk menyimpan banyak nilai dalam satu key
+    H.1) Contoh
+    : Misal kita memiliki hash table dengan ukuran 5. Dan mengisinya dengan 
+    1) Key 6, Value A maka ia masuk ke slot 1 (6 % 5)
+    2) Key 8, Value B maka ia masuk ke slot 3 (8 % 5)
+    3) Key 11, Value C maka ia masuk ke slot 1 (11 % 5)
+
+    0[]
+    1[]->A -> C
+    2[]
+    3[]->B
+    4[]
+
+I) Open Addressing
+    : Solusi dari collision dimana akan dicarikan slot baru yang kosong untuk diisi dengan value.
+
+    I.1) Linear Probing
+    : Bila terdapat colision maka akan dicarikan slot hashkey + i dari slot yang mengalami colision.
+    1) Key 6, Value A maka ia masuk ke slot 1 (6 % 5)
+    2) Key 8, Value B maka ia masuk ke slot 3 (8 % 5)
+    3) Key 11, Value C maka ia masuk ke slot 2 karena slot 1 sudah penuh ((11 % 5) + 1) 
+
+    0[]
+    1[6,A]
+    2[11, C]
+    3[8, B]
+    4[]
+
+    I.2) Quadratic Probing
+    : Bila terdapat colision maka akan dicarikan slot (hashkey + 1)^2 dari slot yang mengalami colision.
+    1) Key 6, Value A maka ia masuk ke slot 1 (6 % 5)
+    2) Key 8, Value B maka ia masuk ke slot 3 (8 % 5)
+    3) Key 11, Value C maka ia masuk ke slot 4 karena slot 1 sudah penuh ((11 % 5) + 1)^2 
+
+    0[]
+    1[6,A]
+    2[]
+    3[8, B]
+    4[11, C]
+
+    I.3) Double Hashing
+    : Bila terdapat colision maka akan dicarikan slot dengan rumus (hashkey + (i * hash2(key))). dan
+     hash2key berumuskan = bilanganPrima - (key % bilanganPrima)
+    1) Key 6, Value A maka ia masuk ke slot 1 (6 % 5)
+    2) Key 8, Value B maka ia masuk ke slot 3 (8 % 5)
+    3) Key 11
+    hash1(11)  = 11 % 5 = 1
+    hash2(11)  = 3- (11 % 3) = 1
+    index = 1 + 1*1 = 2
+
+    0[]
+    1[6,A]
+    2[11, C]
+    3[8, B]
+    4[]
